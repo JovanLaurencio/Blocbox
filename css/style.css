@@ -34,7 +34,14 @@ p {
 .container:after {
    clear: both;
 }
-.one-half, .one-third, .one-fourth {
+.one-half {
+   width:46%;
+   float:left;
+   position:relative;
+   min-height: 1px;
+   margin:0 2% 20px;
+}
+.one-third, .one-fourth {
    width:96%;
    float:left;
    position:relative;
@@ -97,11 +104,22 @@ header nav ul {
    text-align: right;
    float:right;
    margin:0;
+   -webkit-margin-before: 0 !important;
+   -webkit-padding-start: 0 !important;
 }
 header nav ul > li {
    list-style-type: none;
    display: inline-block;
-   margin:0 15px;
+   margin:0 5px;
+}
+
+@media (min-width: 768px) {
+  header nav ul {
+    -webkit-padding-start: 40px !important;
+  }
+  header nav ul > li {
+    margin:0 15px;
+  }
 }
 header nav ul > li.btn-outline {
    padding:10px 15px;
@@ -137,6 +155,10 @@ header .hero p {
 header .hero img {
    display: block;
    margin:3em auto 0;
+   width: 88%;
+   max-width: 654px;
+   height: auto;
+>>>>>>> checkpoint-32
 }
 /* BUTTONS */
 .btn {
@@ -201,6 +223,12 @@ header .hero img {
 .box.middle {
   min-height: 485px;
   margin-top:0px;
+}
+@media (min-width: 992px) {
+    .box.middle {
+    min-height: 485px;
+    margin-top:0px;
+  }
 }
 .box h3 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -300,4 +328,86 @@ header .hero img {
 }
 .testimonials .stagger {
   margin-top: 20px;
+}
+/* TRIAL */
+.trial {
+  padding:4em 0 6em;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaeaea+27,9b9b9b+100 */
+  background: rgb(234,234,234); /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMjclIiBzdG9wLWNvbG9yPSIjZWFlYWVhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzliOWI5YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(234,234,234,1) 27%, rgba(155,155,155,1) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(234,234,234,1) 27%,rgba(155,155,155,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  rgba(234,234,234,1) 27%,rgba(155,155,155,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#9b9b9b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+.trial p {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 100;
+  margin: 10px 0 40px;
+}
+/* FOOTER */
+footer {
+  background-color: #34495E;
+  background-image: linear-gradient(to top,
+    #3498DB 0%, #3498DB 50%, #34495E 50%, #34495E 100%);
+  color: #FFFFFF;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+footer p, footer nav ul {
+  font-size:14px;
+  font-weight:100;
+  text-align: center;
+  margin: 10px auto 0;
+  -webkit-padding-start: 0;
+}
+footer nav ul li {
+  list-style-type: none;
+  display: inline;
+}
+footer nav ul li a {
+  color:#FFFFFF;
+  text-decoration: none;
+}
+footer .left-footer-block.one-third p {
+  font-size: 10px;
+}
+
+footer .left-footer-block.one-third,
+footer .link-block.middle-footer-block.one-third {
+  margin-bottom: 0;
+}
+footer .right-footer-block {
+  background-color: transparent;
+}
+footer .logo{
+  padding: 2.35em 0;
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 992px){
+  footer{
+   background-color: #3498DB;
+   background-image: linear-gradient(to left,
+    #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%);
+   height: 100px;
+  }
+  footer p, footer nav ul{
+    padding: 2em 0;
+    text-align: left;
+  }
+  footer .left-footer-block.one-third p {
+    font-size: 14px;
+  }
+  footer .right-footer-block {
+    background-color: #3498DB;
+  }
+  footer .logo{
+    padding: 2em 0 2em 1.5em;
+  }
 }
