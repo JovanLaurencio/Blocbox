@@ -219,10 +219,6 @@ header .hero img {
   position: relative;
   margin-top: 25px;
 }
-.box.middle {
-  min-height: 485px;
-  margin-top:0px;
-}
 @media (min-width: 992px) {
     .box.middle {
     min-height: 485px;
